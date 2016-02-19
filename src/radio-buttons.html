@@ -1,8 +1,9 @@
-<div class="form-group schema-form-radiobuttons {{form.htmlClass}}"
+<div class="form-group form-group-sm schema-form-radiobuttons {{form.htmlClass}}"
      ng-class="{'has-error': form.disableErrorState !== true &&  hasError(), 'has-success': form.disableSuccessState !== true &&  hasSuccess()}">
   <div>
     <label class="control-label {{form.labelHtmlClass}}" ng-show="showTitle()">{{form.title}}</label>
   </div>
+  <div class="{{form.fieldDivHtmlClass}}">
   <div class="btn-group">
     <label sf-field-model="replaceAll" class="btn {{ (item.value === $$value$$) ? form.style.selected || 'btn-default' : form.style.unselected || 'btn-default'; }}"
            ng-class="{ active: item.value === $$value$$ }"
@@ -20,4 +21,5 @@
     </label>
   </div>
   <div class="help-block" sf-message="form.description"></div>
+  </div>
 </div>

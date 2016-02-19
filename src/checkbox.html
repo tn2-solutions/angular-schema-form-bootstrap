@@ -1,6 +1,9 @@
-<div class="checkbox schema-form-checkbox {{form.htmlClass}}"
+<div class="form-group form-group-sm checkbox schema-form-checkbox {{form.htmlClass}}"
      ng-class="{'has-error': form.disableErrorState !== true &&  hasError(), 'has-success': form.disableSuccessState !== true &&  hasSuccess()}">
-  <label class="{{form.labelHtmlClass}}">
+  <div class="{{form.labelHtmlClass}}">
+  </div>
+  <div class="{{form.fieldDivHtmlClass}}">
+  <label class="control-label">
     <input type="checkbox"
            sf-changed="form"
            ng-disabled="form.readonly"
@@ -8,7 +11,8 @@
            schema-validate="form"
            class="{{form.fieldHtmlClass}}"
            name="{{form.key.slice(-1)[0]}}">
-    <span ng-bind-html="form.title"></span>
+    <span ng-bind-html="form.title" translate>{{form.title}}</span>
   </label>
   <div class="help-block" sf-message="form.description"></div>
+  </div>
 </div>
